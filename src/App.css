@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+*{padding: 0;margin:0; font-family: 'Bungee Spice', sans-serif;}
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+#game{
+  
+    width: 500px;
+    height: 250px;
+    border: 1px solid black; 
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{font-size: 60px;
+  margin-left: 41%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#character{
+    width: 20px;
+    height: 50px;
+    box-shadow: 10px 3px 45px rgb(255, 255, 14);
+    position: relative;
+    top: 150px;
 }
+.animate{
+    animation:jump 500ms ;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+@keyframes jump{
+    0%{top:150px;}
+    30%{top:100px;}
+    70%{top:100px;}
+    100%{top:150px;}
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#block{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    box-shadow: 10px 13px 40px red;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: block 1.5s infinite linear;
+}
+@keyframes block{
+    0%{left:480px;}
+    100%{left:-40px;}
 }
